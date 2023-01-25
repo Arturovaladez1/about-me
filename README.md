@@ -10,6 +10,7 @@ The about-me page contains info about myself, my goals, my life, and contains so
 
 * [JS help](https://www.w3schools.com/js/js_variables.asp)
 * [201 class repo](https://github.com/codefellows/seattle-code-201d95/tree/main/class-02)
+* [good info on read-mee](https://codefellows.github.io/code-201-guide/curriculum/class-02/project-setup)
 
 ### Lighthouse Accessibility Report Score
 
