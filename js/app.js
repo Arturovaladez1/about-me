@@ -109,26 +109,28 @@ for (let i = 0; i < attempts ; i++) {
 trys are 6
 score 0  */
 
-let movieguess = prompt('Name one of my favorite movies.').toLowerCase();e
+let movieguess = prompt('Name one of my favorite movies.').toLowerCase();
 let trys = 6;
 let score = 0;
-let answerlist = ['Tokyo drift',
-  'FF1',
-  'Lone Survivor',
-  'Rush Hour',
-  'Chef',
-  'Batman',
-  'Windstalker',
-  'Home Alone',
-  'Sandlot',
-  'John Wick' ];
-while (movieguess !== 'Chef' ) {
-  console.log(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
-  alert(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
-
-  for (let i = 0; i < answerlist.length; i++) {
-    console.log(answerlist[i]);
-  } if (answerlist[i] === movieguess) {
+let answerlist = ['tokyo drift',
+  'ff1',
+  'lone survivor',
+  'rush hour',
+  'chef',
+  'batman',
+  'windstalker',
+  'home Alone',
+  'handlot',
+  'john wick' ];
+while (trys>0) {
+  trys--;
+  if (movieguess === answerlist[4] ) {
     console.log('you are correct!');
+    alert('you are correct');
   }
 }
+// console.log(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
+// alert(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
+// if (movieguess === answerlist[4] ) {
+//   console.log('you are correct!');
+//   alert('you are correct');
