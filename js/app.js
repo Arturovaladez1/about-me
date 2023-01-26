@@ -26,7 +26,6 @@ country(home);
 
 let Navy = prompt ('Was I in the U.S. Army?').toLowerCase();
 
-/*
 function military() {
   if (Navy === 'yes' || Navy === 'y'){
     console.log('Wrong answer, you can find out more on this page.');
@@ -43,6 +42,8 @@ function military() {
 military(Navy);
 
 let interests = prompt ('Am I a front end developer?').toLowerCase();
+
+/*
 
 function developer() {
   if (interests === 'yes' || interests === 'y'){
