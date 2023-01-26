@@ -43,8 +43,6 @@ military(Navy);
 
 let interests = prompt ('Am I a front end developer?').toLowerCase();
 
-/*
-
 function developer() {
   if (interests === 'yes' || interests === 'y'){
     console.log ('You are right! Nice.');
@@ -60,7 +58,7 @@ function developer() {
 
 developer(interests);
 
-*/
+/*
 
 let hobbies = prompt ('Do I like music?')
   .toLowerCase();
