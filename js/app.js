@@ -76,51 +76,57 @@ function fun() {
 
 fun(hobbies);
 
-/*
 let pet = prompt ('Do I own a dog?')
   .toLowerCase();
 
-if (pet === 'yes' || pet === 'y'){
-  // console.log ('you are right, I do.');
-  alert('you are right, I do.');
-} else if ( pet === 'no' || pet === 'no') {
-  // console.log (' I actually do, I own a malinois mix.');
-  alert('I actually do, I own a malinois mix.');
-} else {
-  // console.log ('oops, thats not it.');
-  alert('Oops, thats not it.');
+function dog() {
+  if (pet === 'yes' || pet === 'y'){
+    // console.log ('you are right, I do.');
+    alert('you are right, I do.');
+  } else if ( pet === 'no' || pet === 'no') {
+    // console.log (' I actually do, I own a malinois mix.');
+    alert('I actually do, I own a malinois mix.');
+  } else {
+    // console.log ('oops, thats not it.');
+    alert('Oops, thats not it.');
+  }
 }
+
+dog(pet);
 
 let attempts = 4;
 let points = 0;
 
-for (let i = 0; i < attempts ; i++) {
+let luck = prompt('What is my lucky number?');
+luck = parseInt(luck);
 
-  let luck = prompt('What is my lucky number?');
-  luck = parseInt(luck);
-  console.log('What is my lucky number?');
+function lucky() {
+  for (let i = 0; i < attempts ; i++) {
 
-  if (luck === 4) {
-    points++;
-    console.log(`That is correct! your score is ${points}`);
-    alert(`That is correct! your score is ${points}`);
-    break;
+    console.log('What is my lucky number?');
 
-  } else if (luck > 4) {
-    console.log(`that is too high! you have ${attempts - i - 1} left.`);
-    alert(`that is too high! You have ${attempts - i - 1} left.`);
+    if (luck === 4) {
+      points++;
+      console.log(`That is correct! your score is ${points}`);
+      alert(`That is correct! your score is ${points}`);
+      break;
 
-  } else if (luck < 4) {
-    console.log(`That is too low! You have ${attempts - i - 1} left.`);
-    alert(`That is too low! you have ${attempts - i - 1} left.`);
-  } else {
-    alert('Please enter a number.');
+    } else if (luck > 4) {
+      console.log(`that is too high! you have ${attempts - i - 1} left.`);
+      alert(`that is too high! You have ${attempts - i - 1} left.`);
+
+    } else if (luck < 4) {
+      console.log(`That is too low! You have ${attempts - i - 1} left.`);
+      alert(`That is too low! you have ${attempts - i - 1} left.`);
+    } else {
+      alert('Please enter a number.');
+    }
+    console.log(attempts);
+    console.log(i);
   }
-  console.log(attempts);
-  console.log(i);
 }
 
-
+lucky(luck);
 
 /* array is answerlist
 trys are 6
