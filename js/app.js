@@ -1,4 +1,5 @@
 'use strict';
+
 alert ('Hey there!');
 // console.log ('hello');
 
@@ -73,4 +74,61 @@ if (pet === 'yes' || pet === 'y'){
   alert('Oops, thats not it.');
 }
 
-alert('Welcome to my page. Thank you for taking this quiz ' + username);
+let attempts = 4;
+let points = 0;
+
+for (let i = 0; i < attempts ; i++) {
+
+  let luck = prompt('What is my lucky number?');
+  luck = parseInt(luck);
+  console.log('What is my lucky number?');
+
+  if (luck === 4) {
+    points++;
+    console.log(`That is correct! your score is ${points}`);
+    alert(`That is correct! your score is ${points}`);
+    break;
+
+  } else if (luck > 4) {
+    console.log(`that is too high! you have ${attempts - i - 1} left.`);
+    alert(`that is too high! You have ${attempts - i - 1} left.`);
+
+  } else if (luck < 4) {
+    console.log(`That is too low! You have ${attempts - i - 1} left.`);
+    alert(`That is too low! you have ${attempts - i - 1} left.`);
+  } else {
+    alert('Please enter a number.');
+  }
+  console.log(attempts);
+  console.log(i);
+}
+
+
+
+/* array is answerlist
+trys are 6
+score 0  */
+
+let movieguess = prompt('Name one of my favorite movies.').toLowerCase();e
+let trys = 6;
+let score = 0;
+let answerlist = ['Tokyo drift',
+  'FF1',
+  'Lone Survivor',
+  'Rush Hour',
+  'Chef',
+  'Batman',
+  'Windstalker',
+  'Home Alone',
+  'Sandlot',
+  'John Wick' ];
+while (movieguess !== 'Chef' ) {
+  console.log(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
+  alert(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
+
+  for (let i = 0; i < answerlist.length; i++) {
+    console.log(answerlist[i]);
+  } if (answerlist[i] === movieguess) {
+    console.log('you are correct!');
+  }
+}
