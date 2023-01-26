@@ -9,57 +9,42 @@ alert ('Hello ' + username );
 
 let home = prompt('Have I lived in another country?').toLowerCase();
 
-function country() {
-  if (home === 'yes' || home === 'y'){
-    console.log ('You are correct ' + username);
-    alert('You are correct ' + username);
-  } else if (home === 'no' || home === 'n'){
-    console.log ('Almost, try again!');
-    alert('Almost, try again! ');
-  } else {
-    console.log ('Oops, thats not it');
-    alert('Oops, thats not it.');
-  }
+if (home === 'yes' || home === 'y'){
+  // console.log ('You are correct ' + username);
+  alert('You are correct ' + username);
+} else if (home === 'no' || home === 'n'){
+  // console.log ('Almost, try again!');
+  alert('Almost, try again! ');
+} else {
+  // console.log ('Oops, thats not it');
+  alert('Oops, thats not it.');
 }
-
-country(home);
 
 let Navy = prompt ('Was I in the U.S. Army?').toLowerCase();
 
-/*
-function military() {
-  if (Navy === 'yes' || Navy === 'y'){
-    console.log('Wrong answer, you can find out more on this page.');
-    alert('Wrong answer, you can find out more on this page.');
-  } else if (Navy === 'no' || Navy === 'n'){
-    console.log ('You are right! I was in the U.S. Navy');
-    alert('You are right! I was in the U.S. Navy.');
-  } else {
-    console.log ('Try again.');
-    alert('Oops, thats not it.');
-  }
+if (Navy === 'yes' || Navy === 'y'){
+  // console.log('Wrong answer, you can find out more on this page.');
+  alert('Wrong answer, you can find out more on this page.');
+} else if (Navy === 'no' || Navy === 'n'){
+  // console.log ('You are right! I was in the U.S. Navy');
+  alert('You are right! I was in the U.S. Navy.');
+} else {
+  // console.log ('Try again.');
+  alert('Oops, thats not it.');
 }
-
-military(Navy);
 
 let interests = prompt ('Am I a front end developer?').toLowerCase();
 
-function developer() {
-  if (interests === 'yes' || interests === 'y'){
-    console.log ('You are right! Nice.');
-    alert('You are right! Nice.');
-  } else if (interests === 'no' || interests === 'n'){
-    console.log('Actually, I am a front end developer.');
-    alert('Actually, I am  a front end developer.');
-  } else {
-    console.log ('Oops, thats not it.');
-    alert('Oops, thats not it.');
-  }
+if (interests === 'yes' || interests === 'y'){
+  // console.log ('You are right! Nice.');
+  alert('You are right! Nice.');
+} else if (interests === 'no' || interests === 'n'){
+  // console.log('Actually, I am a front end developer.');
+  alert('Actually, I am  a front end developer.');
+} else {
+  // console.log ('Oops, thats not it.');
+  alert('Oops, thats not it.');
 }
-
-developer(interests);
-
-*/
 
 let hobbies = prompt ('Do I like music?')
   .toLowerCase();
@@ -122,7 +107,7 @@ for (let i = 0; i < attempts ; i++) {
 
 /* array is answerlist
 trys are 6
-score 0 */
+score 0  */
 
 let movieguess = prompt('Name one of my favorite movies.').toLowerCase();e
 let trys = 6;
