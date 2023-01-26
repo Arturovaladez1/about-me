@@ -58,24 +58,25 @@ function developer() {
 
 developer(interests);
 
-// test
-
-/*
-
 let hobbies = prompt ('Do I like music?')
   .toLowerCase();
 
-if (hobbies === 'yes' || hobbies === 'y'){
-  // console.log ('You are right, I do.');
-  alert('You are right, I do.');
-} else if ( hobbies === 'no' || hobbies === 'n'){
-  // console.log ('I love music!');
-  alert('I love music!');
-} else {
-  // console.log ('Try again.');
-  alert('Oops, thats not it.');
+function fun() {
+  if (hobbies === 'yes' || hobbies === 'y'){
+    console.log ('You are right, I do.');
+    alert('You are right, I do.');
+  } else if ( hobbies === 'no' || hobbies === 'n'){
+    console.log ('I love music!');
+    alert('I love music!');
+  } else {
+    console.log ('Try again.');
+    alert('Oops, thats not it.');
+  }
 }
 
+fun(hobbies);
+
+/*
 let pet = prompt ('Do I own a dog?')
   .toLowerCase();
 
