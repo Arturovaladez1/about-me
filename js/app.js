@@ -1,10 +1,10 @@
 'use strict';
 
 alert ('Hey there!');
-// console.log ('hello');
+console.log ('hello');
 
 let username = prompt ('What is your name?');
-// console.log('What is your name?');
+console.log('What is your name?');
 alert ('Hello ' + username );
 
 let home = prompt('Have I lived in another country?').toLowerCase();
@@ -81,13 +81,13 @@ let pet = prompt ('Do I own a dog?')
 
 function dog() {
   if (pet === 'yes' || pet === 'y'){
-    // console.log ('you are right, I do.');
+    console.log ('you are right, I do.');
     alert('you are right, I do.');
   } else if ( pet === 'no' || pet === 'no') {
-    // console.log (' I actually do, I own a malinois mix.');
+    console.log (' I actually do, I own a malinois mix.');
     alert('I actually do, I own a malinois mix.');
   } else {
-    // console.log ('oops, thats not it.');
+    console.log ('oops, thats not it.');
     alert('Oops, thats not it.');
   }
 }
@@ -96,7 +96,6 @@ dog(pet);
 
 let attempts = 4;
 let points = 0;
-
 let luck = prompt('What is my lucky number?');
 luck = parseInt(luck);
 
@@ -114,12 +113,15 @@ function lucky() {
     } else if (luck > 4) {
       console.log(`that is too high! you have ${attempts - i - 1} left.`);
       alert(`that is too high! You have ${attempts - i - 1} left.`);
+      prompt('Wanna try again? Whats my lucky number?');
 
     } else if (luck < 4) {
       console.log(`That is too low! You have ${attempts - i - 1} left.`);
       alert(`That is too low! you have ${attempts - i - 1} left.`);
+      prompt('Wanna try again? Whats my lucky number?');
     } else {
       alert('Please enter a number.');
+      prompt('Wanna try again? Whats my lucky number?');
     }
     console.log(attempts);
     console.log(i);
@@ -127,10 +129,6 @@ function lucky() {
 }
 
 lucky(luck);
-
-/* array is answerlist
-trys are 6
-score 0 */
 
 let movieguess = prompt('Name one of my favorite movies.').toLowerCase();
 let trys = 6;
@@ -145,15 +143,13 @@ let answerlist = ['tokyo drift',
   'home Alone',
   'handlot',
   'john wick' ];
-while (trys>0) {
-  trys--;
-  if (movieguess === answerlist[4] ) {
-    console.log('you are correct!');
-    alert('you are correct');
-  }
-}
-// console.log(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
-// alert(`Almost, I might give you a hint next time. You have ${trys} remaining tries left.`);
-// if (movieguess === answerlist[4] ) {
-//   console.log('you are correct!');
-//   alert('you are correct');
+  let correctAnswer = 'chef';
+
+while (correctAnswer === true) {
+      score++;
+      console.log('you are correct!');
+      alert('you are correct');
+      break;
+     } 
+    }
+    
