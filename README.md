@@ -16,6 +16,7 @@ The about-me page contains info about myself, my goals, my life, and contains so
 
 [lighthousclass2](img/Lighthouseclass2.png) 
 [lighthouseclass2](img/Lighthouseclass3.png)
+[lighthousereport](img/lighthousereportclass5.png)
 
 ### Reflections and Comments
 
