@@ -1,155 +1,174 @@
 'use strict';
+// Global Variables
+// alert('Hey there!');
+console.log('hello');
 
-alert ('Hey there!');
-console.log ('hello');
-
-let username = prompt ('What is your name?');
-console.log('What is your name?');
-alert ('Hello ' + username );
-
-let home = prompt('Have I lived in another country?').toLowerCase();
+// let username = prompt('What is your name?');
+// console.log(username);
+// alert('Hello ' + username);
+let points = 0;
 
 function country() {
-  if (home === 'yes' || home === 'y'){
-    console.log ('You are correct ' + username);
-    alert('You are correct ' + username);
-  } else if (home === 'no' || home === 'n'){
-    console.log ('Almost, try again!');
-    alert('Almost, try again! ');
+
+  let home = prompt('Have I lived in another country?').toLowerCase();
+  console.log(home);
+  if (home === 'yes' || home === 'y') {
+    alert(`You are correct,  ${username}  you scored ${points}`);
+    points++;
+
+  } else if (home === 'no' || home === 'n') {
+    alert('Yes I have.');
+
   } else {
-    console.log ('Oops, thats not it');
+    console.log('Oops, thats not it');
     alert('Oops, thats not it.');
   }
 }
 
-country(home);
+// country();
 
-let Navy = prompt ('Was I in the U.S. Army?').toLowerCase();
 
 function military() {
-  if (Navy === 'yes' || Navy === 'y'){
-    console.log('Wrong answer, you can find out more on this page.');
+  let navy = prompt('Was I in the U.S. Army?').toLowerCase();
+  console.log(navy);
+
+  if (navy === 'yes' || navy === 'y') {
     alert('Wrong answer, you can find out more on this page.');
-  } else if (Navy === 'no' || Navy === 'n'){
-    console.log ('You are right! I was in the U.S. Navy');
-    alert('You are right! I was in the U.S. Navy.');
+
+  } else if (navy === 'no' || navy === 'n') {
+    alert(`You are correct,  ${username}  you scored ${points}`);
+    points++;
+
   } else {
-    console.log ('Try again.');
     alert('Oops, thats not it.');
   }
 }
 
-military(Navy);
+// military(navy);
 
-let interests = prompt ('Am I a front end developer?').toLowerCase();
 
 function developer() {
-  if (interests === 'yes' || interests === 'y'){
-    console.log ('You are right! Nice.');
-    alert('You are right! Nice.');
-  } else if (interests === 'no' || interests === 'n'){
-    console.log('Actually, I am a front end developer.');
+
+  let interests = prompt('Am I a front end developer?').toLowerCase();
+
+  if (interests === 'yes' || interests === 'y') {
+    alert(`You are correct,  ${username}  you scored ${points}`);
+    points++;
+
+  } else if (interests === 'no' || interests === 'n') {
     alert('Actually, I am  a front end developer.');
+
   } else {
-    console.log ('Oops, thats not it.');
     alert('Oops, thats not it.');
   }
 }
 
-developer(interests);
+// developer();
 
-let hobbies = prompt ('Do I like music?')
-  .toLowerCase();
 
 function fun() {
-  if (hobbies === 'yes' || hobbies === 'y'){
-    console.log ('You are right, I do.');
-    alert('You are right, I do.');
-  } else if ( hobbies === 'no' || hobbies === 'n'){
-    console.log ('I love music!');
+
+  let hobbies = prompt('Do I like music?')
+    .toLowerCase();
+
+  if (hobbies === 'yes' || hobbies === 'y') {
+    alert(`You are correct,  ${username}  you scored ${points}`);
+    points++;
+
+  } else if (hobbies === 'no' || hobbies === 'n') {
     alert('I love music!');
+
   } else {
-    console.log ('Try again.');
     alert('Oops, thats not it.');
   }
 }
 
-fun(hobbies);
+// fun();
 
-let pet = prompt ('Do I own a dog?')
-  .toLowerCase();
 
 function dog() {
-  if (pet === 'yes' || pet === 'y'){
-    console.log ('you are right, I do.');
-    alert('you are right, I do.');
-  } else if ( pet === 'no' || pet === 'no') {
-    console.log (' I actually do, I own a malinois mix.');
+
+  let pet = prompt('Do I own a dog?')
+    .toLowerCase();
+
+  if (pet === 'yes' || pet === 'y') {
+    alert(`You are correct,  ${username}  you scored ${points}`);
+    points++;
+
+  } else if (pet === 'no' || pet === 'no') {
     alert('I actually do, I own a malinois mix.');
+
   } else {
-    console.log ('oops, thats not it.');
     alert('Oops, thats not it.');
   }
 }
 
-dog(pet);
+// dog();
 
-let attempts = 4;
-let points = 0;
-let luck = prompt('What is my lucky number?');
-luck = parseInt(luck);
 
 function lucky() {
-  for (let i = 0; i < attempts ; i++) {
+
+  let attempts = 4;
+  let luck = prompt('What is my lucky number?');
+  luck = parseInt(luck);
+
+  for (let i = 0; i < attempts; i++) {
 
     console.log('What is my lucky number?');
 
     if (luck === 4) {
-      points++;
-      console.log(`That is correct! your score is ${points}`);
       alert(`That is correct! your score is ${points}`);
+      points++;
       break;
 
+
     } else if (luck > 4) {
-      console.log(`that is too high! you have ${attempts - i - 1} left.`);
       alert(`that is too high! You have ${attempts - i - 1} left.`);
       prompt('Wanna try again? Whats my lucky number?');
 
     } else if (luck < 4) {
-      console.log(`That is too low! You have ${attempts - i - 1} left.`);
       alert(`That is too low! you have ${attempts - i - 1} left.`);
       prompt('Wanna try again? Whats my lucky number?');
+
     } else {
       alert('Please enter a number.');
       prompt('Wanna try again? Whats my lucky number?');
     }
-    console.log(attempts);
-    console.log(i);
   }
 }
 
-lucky(luck);
+// lucky();
 
-let movieguess = prompt('Name one of my favorite movies.').toLowerCase();
-let trys = 6;
-let score = 0;
-let answerlist = ['tokyo drift',
-  'ff1',
-  'lone survivor',
-  'rush hour',
-  'chef',
-  'batman',
-  'windstalker',
-  'home Alone',
-  'handlot',
-  'john wick' ];
-  let correctAnswer = 'chef';
+function favoriteLetter() {
 
-while (correctAnswer === true) {
-      score++;
-      console.log('you are correct!');
-      alert('you are correct');
+  let listOfPossibleAnswers = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+  let answer = prompt('Guess my favorite letter').toLowerCase();
+  for (let i = 0; i < listOfPossibleAnswers.length; i++) {
+
+    console.log(answer);
+    console.log(i);
+
+    console.log(listOfPossibleAnswers[i]);
+
+    if (answer === listOfPossibleAnswers[i]) {
+      alert(`that is correct you scored + ${points}`);
+      points++;
       break;
-     } 
+    // } else if (answer !== listOfPossibleAnswers[i]) {
+    //   alert(`please try again you scored  ${points}`);
+    //   answer = prompt('Guess my favorite letter').toLowerCase();
+    } else {
+      alert('Please enter a letter.');
+      answer = prompt('Guess my favorite letter').toLowerCase();
+
     }
-    
+  }
+
+
+
+
+
+}
+
+// favoriteLetter();

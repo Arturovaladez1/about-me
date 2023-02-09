@@ -14,9 +14,9 @@ The about-me page contains info about myself, my goals, my life, and contains so
 
 ### Lighthouse Accessibility Report Score
 
-[lighthousclass2](img/Lighthouseclass2.png) 
-[lighthouseclass2](img/Lighthouseclass3.png)
-[lighthousereport](img/lighthousereportclass5.png)
+[lighthous class 2](img/Lighthouseclass2.png) 
+[lighthouse class 3](img/Lighthouseclass3.png)
+[lighthouse class 5](img/lighthousereportclass5.png)
 
 ### Reflections and Comments
 
