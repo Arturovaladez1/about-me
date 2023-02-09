@@ -1,20 +1,21 @@
 'use strict';
 // Global Variables
-// alert('Hey there!');
+alert('Hey there!');
 console.log('hello');
 
-// let username = prompt('What is your name?');
-// console.log(username);
-// alert('Hello ' + username);
-let points = 0;
+let username = prompt('What is your name?');
+console.log(username);
+alert('Hello ' + username);
+let score = 0;
 
 function country() {
 
   let home = prompt('Have I lived in another country?').toLowerCase();
   console.log(home);
   if (home === 'yes' || home === 'y') {
-    alert(`You are correct,  ${username}  you scored ${points}`);
-    points++;
+
+    alert(`You are correct,  ${username}  your score is ${score}`);
+    score++;
 
   } else if (home === 'no' || home === 'n') {
     alert('Yes I have.');
@@ -25,7 +26,7 @@ function country() {
   }
 }
 
-// country();
+country();
 
 
 function military() {
@@ -36,24 +37,25 @@ function military() {
     alert('Wrong answer, you can find out more on this page.');
 
   } else if (navy === 'no' || navy === 'n') {
-    alert(`You are correct,  ${username}  you scored ${points}`);
-    points++;
+    alert(`You are correct,  ${username}  your score is ${score}`);
+    score++;
 
   } else {
     alert('Oops, thats not it.');
   }
 }
 
-// military(navy);
+military();
 
 
 function developer() {
 
   let interests = prompt('Am I a front end developer?').toLowerCase();
+  console.log(interests);
 
   if (interests === 'yes' || interests === 'y') {
-    alert(`You are correct,  ${username}  you scored ${points}`);
-    points++;
+    alert(`You are correct,  ${username}  your score is ${score}`);
+    score++;
 
   } else if (interests === 'no' || interests === 'n') {
     alert('Actually, I am  a front end developer.');
@@ -63,17 +65,18 @@ function developer() {
   }
 }
 
-// developer();
+developer();
 
 
 function fun() {
 
   let hobbies = prompt('Do I like music?')
     .toLowerCase();
+  console.log(hobbies);
 
   if (hobbies === 'yes' || hobbies === 'y') {
-    alert(`You are correct,  ${username}  you scored ${points}`);
-    points++;
+    alert(`You are correct,  ${username}  your score is ${score}`);
+    score++;
 
   } else if (hobbies === 'no' || hobbies === 'n') {
     alert('I love music!');
@@ -83,17 +86,18 @@ function fun() {
   }
 }
 
-// fun();
+fun();
 
 
 function dog() {
 
   let pet = prompt('Do I own a dog?')
     .toLowerCase();
+  console.log(pet);
 
   if (pet === 'yes' || pet === 'y') {
-    alert(`You are correct,  ${username}  you scored ${points}`);
-    points++;
+    alert(`You are correct,  ${username}  your score is ${score}`);
+    score++;
 
   } else if (pet === 'no' || pet === 'no') {
     alert('I actually do, I own a malinois mix.');
@@ -103,13 +107,14 @@ function dog() {
   }
 }
 
-// dog();
+dog();
 
 
 function lucky() {
 
   let attempts = 4;
   let luck = prompt('What is my lucky number?');
+  console.log(luck);
   luck = parseInt(luck);
 
   for (let i = 0; i < attempts; i++) {
@@ -117,8 +122,8 @@ function lucky() {
     console.log('What is my lucky number?');
 
     if (luck === 4) {
-      alert(`That is correct! your score is ${points}`);
-      points++;
+      alert(`That is correct! your score is ${score}`);
+      score++;
       break;
 
 
@@ -137,38 +142,73 @@ function lucky() {
   }
 }
 
-// lucky();
+lucky();
 
-function favoriteLetter() {
+function color() {
 
-  let listOfPossibleAnswers = ['a', 'b', 'c', 'd', 'e', 'f'];
+  let color = ['green', 'orange', 'red', 'blue'];
+  let guessColor = prompt('What color do I like?');
+  console.log(color);
+  let guessAttempts = 6;
+  let userCorrect = false;
 
-  let answer = prompt('Guess my favorite letter').toLowerCase();
-  for (let i = 0; i < listOfPossibleAnswers.length; i++) {
+  while (guessAttempts) {
+    guessAttempts--;
+    alert(`you have ${guessAttempts} attempts left.`);
 
-    console.log(answer);
-    console.log(i);
-
-    console.log(listOfPossibleAnswers[i]);
-
-    if (answer === listOfPossibleAnswers[i]) {
-      alert(`that is correct you scored + ${points}`);
-      points++;
+    for (let i = 0; i < color.length; i++) {
+      if (guessColor === color[i]) {
+        userCorrect = true;
+      }
+    }
+    if (userCorrect === true) {
+      score++;
+      userCorrect = false;
+      alert('correct');
       break;
-    // } else if (answer !== listOfPossibleAnswers[i]) {
-    //   alert(`please try again you scored  ${points}`);
-    //   answer = prompt('Guess my favorite letter').toLowerCase();
-    } else {
-      alert('Please enter a letter.');
-      answer = prompt('Guess my favorite letter').toLowerCase();
-
+    } else if (guessAttempts > 0) {
+      alert('sorry, guess again');
+      guessColor = prompt('What color do I like?');
     }
   }
-
-
-
-
-
+  alert(`answers can be ${color} & your final score is ${score} out of 7!`);
 }
+color();
+
+
+
+
+
+// function favoriteLetter() {
+
+//   let listOfPossibleAnswers = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+//   let answer = prompt('Guess my favorite letter').toLowerCase();
+//   for (let i = 0; i < listOfPossibleAnswers.length; i++) {
+
+//     console.log(answer);
+//     console.log(i);
+
+//     console.log(listOfPossibleAnswers[i]);
+
+//     if (answer === listOfPossibleAnswers[i]) {
+//       alert(`that is correct you scored + ${points}`);
+//       points++;
+//       break;
+//     // } else if (answer !== listOfPossibleAnswers[i]) {
+//     //   alert(`please try again you scored  ${points}`);
+//     //   answer = prompt('Guess my favorite letter').toLowerCase();
+//     } else {
+//       alert('Please enter a letter.');
+//       answer = prompt('Guess my favorite letter').toLowerCase();
+
+//     }
+//   }
+
+
+
+
+
+// }
 
 // favoriteLetter();
